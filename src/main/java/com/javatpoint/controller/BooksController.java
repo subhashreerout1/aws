@@ -36,14 +36,14 @@ private void deleteBook(@PathVariable("bookid") int bookid)
 booksService.delete(bookid);
 }
 //creating post mapping that post the book detail in the database
-@PostMapping("/books")
+@GetMapping("/books")
 private int saveBook()
 {
-    Books books=new Books();
+  /*  Books books=new Books();
     books.setBookname("science");
     books.setAuthor("mamuni");
-booksService.saveOrUpdate(books);
-return books.getBookid();
+booksService.saveOrUpdate(books);*/
+return 1;
 }
 //creating put mapping that updates the book detail 
 @PutMapping("/books")
